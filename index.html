@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>线上美术展</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game"></canvas>
+
+    <!-- 顶部提示条 -->
+    <div id="hint-bar" class="hidden">按 <b>E</b> 查看作品</div>
+
+    <!-- 开场引导 -->
+    <div id="intro" class="overlay">
+      <h1 id="intro-title">线上美术展</h1>
+      <p id="intro-sub"></p>
+      <div class="controls">
+        <p><b>W A S D</b> / 方向键 —— 移动</p>
+        <p><b>E</b> / 空格 —— 查看作品</p>
+        <p><b>Esc</b> —— 关闭弹窗</p>
+      </div>
+      <button id="start-btn">进入展厅</button>
+    </div>
+
+    <!-- 作品详情弹窗 -->
+    <div id="modal" class="overlay hidden">
+      <div class="modal-box">
+        <button id="modal-close" aria-label="关闭">✕</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
